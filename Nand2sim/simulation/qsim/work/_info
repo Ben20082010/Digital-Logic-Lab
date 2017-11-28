@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 dH:\gitrepo\Digital-Logic-Lab\Nand2sim\simulation\qsim
+vNand2sim
+Z1 IDi>QgTRA@Sh1PJ[S?E@Z[3
+Z2 Vk_Ha0g2CIjizXT3QUTP7L3
+Z3 dH:\gitrepo\Digital-Logic-Lab\Nand2sim\simulation\qsim
+Z4 w1511881572
+Z5 8Nand2sim.vo
+Z6 FNand2sim.vo
+L0 32
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 n@nand2sim
+!i10b 1
+Z10 !s100 iX2LG1Po^czDKFjdzRJ<P2
+!s85 0
+Z11 !s108 1511881573.851000
+Z12 !s107 Nand2sim.vo|
+Z13 !s90 -work|work|Nand2sim.vo|
+!s101 -O0
+vNand2sim_vlg_vec_tst
+!i10b 1
+!s100 ;ab]RaR:`zYz`1R<fCYJF2
+I3Eb0XVzG091NFQB627Y>[3
+VMba]_oH=k<Mdb@:jMIkil2
+R3
+w1511881570
+8Nand2sim.vwf.vt
+FNand2sim.vwf.vt
+L0 30
+R7
+r1
+!s85 0
+31
+!s108 1511881574.090000
+!s107 Nand2sim.vwf.vt|
+!s90 -work|work|Nand2sim.vwf.vt|
+!s101 -O0
+R8
+n@nand2sim_vlg_vec_tst

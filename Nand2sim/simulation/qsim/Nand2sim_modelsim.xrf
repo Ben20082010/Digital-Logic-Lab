@@ -1,0 +1,9 @@
+vendor_name = ModelSim
+source_file = 1, H:/gitrepo/Digital-Logic-Lab/Nand2sim/Nand2sim.bdf
+source_file = 1, H:/gitrepo/Digital-Logic-Lab/Nand2sim/Nand2sim.vwf
+source_file = 1, H:/gitrepo/Digital-Logic-Lab/Nand2sim/db/Nand2sim.cbx.xml
+design_name = Nand2sim
+instance = comp, \X~output , X~output, Nand2sim, 1
+instance = comp, \B~input , B~input, Nand2sim, 1
+instance = comp, \A~input , A~input, Nand2sim, 1
+instance = comp, \NAND , NAND, Nand2sim, 1

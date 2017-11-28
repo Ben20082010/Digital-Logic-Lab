@@ -1,0 +1,6 @@
+|Nand2sim
+X <= NAND.DB_MAX_OUTPUT_PORT_TYPE
+B => NAND.IN0
+A => NAND.IN1
+
+
