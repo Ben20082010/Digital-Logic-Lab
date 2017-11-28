@@ -1,0 +1,11 @@
+vendor_name = ModelSim
+source_file = 1, H:/gitrepo/Digital-Logic-Lab/HalfAdder/HalfAdder.bdf
+source_file = 1, H:/gitrepo/Digital-Logic-Lab/HalfAdder/HalfAdd.vwf
+source_file = 1, H:/gitrepo/Digital-Logic-Lab/HalfAdder/db/HalfAdder.cbx.xml
+design_name = HalfAdder
+instance = comp, \CARRY~output , CARRY~output, HalfAdder, 1
+instance = comp, \SUM~output , SUM~output, HalfAdder, 1
+instance = comp, \B~input , B~input, HalfAdder, 1
+instance = comp, \A~input , A~input, HalfAdder, 1
+instance = comp, \A-NAND-B , A-NAND-B, HalfAdder, 1
+instance = comp, \AND_INV~0 , AND_INV~0, HalfAdder, 1

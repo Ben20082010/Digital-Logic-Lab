@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 dH:\gitrepo\Digital-Logic-Lab\HalfAdder\simulation\qsim
+vHalfAdder
+Z1 I3TI8XKocRncRQXHW4@Q]d3
+Z2 VL46aL8Ff6l64L:eZ8bA@A3
+Z3 dH:\gitrepo\Digital-Logic-Lab\HalfAdder\simulation\qsim
+Z4 w1511883737
+Z5 8HalfAdder.vo
+Z6 FHalfAdder.vo
+L0 32
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 n@half@adder
+!i10b 1
+Z10 !s100 MH[bd>;iog:D^Wm3jdon`0
+!s85 0
+Z11 !s108 1511883737.939000
+Z12 !s107 HalfAdder.vo|
+Z13 !s90 -work|work|HalfAdder.vo|
+!s101 -O0
+vHalfAdder_vlg_vec_tst
+!i10b 1
+!s100 ]h==>4d@_A0Q6VOJHDe7<1
+Ijz0cHi@ohkW^W=>I9z]=^1
+VC9>e0g5cXO=l6eeOciFXC2
+R3
+w1511883735
+8HalfAdd.vwf.vt
+FHalfAdd.vwf.vt
+L0 30
+R7
+r1
+!s85 0
+31
+!s108 1511883738.136000
+!s107 HalfAdd.vwf.vt|
+!s90 -work|work|HalfAdd.vwf.vt|
+!s101 -O0
+R8
+n@half@adder_vlg_vec_tst
