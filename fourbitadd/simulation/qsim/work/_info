@@ -1,0 +1,43 @@
+m255
+K3
+13
+cModel Technology
+Z0 dH:\gitrepo\Digital-Logic-Lab\fourbitadd\simulation\qsim
+vfourbitadd
+Z1 !s100 QVZlm2@JJFoEaSLhijj532
+Z2 IJhiz6UfcgQZnKVY;lT=bc2
+Z3 VMfEKZ9kg[TUc?;1OG]zFL2
+Z4 dH:\gitrepo\Digital-Logic-Lab\fourbitadd\simulation\qsim
+Z5 w1512142269
+Z6 8fourbitadd.vo
+Z7 Ffourbitadd.vo
+L0 32
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|fourbitadd.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1512142270.380000
+Z12 !s107 fourbitadd.vo|
+!s101 -O0
+vfourbitadd_vlg_vec_tst
+!i10b 1
+!s100 @IiO<JigO4mTKmLzmP7lH0
+I715LeGWkgH4@I@zmWB4bY2
+Z13 V@=^BKXd5CQho8mW`zR9WK3
+R4
+w1512142267
+Z14 8Waveform.vwf.vt
+Z15 FWaveform.vwf.vt
+L0 30
+R8
+r1
+!s85 0
+31
+!s108 1512142270.577000
+!s107 Waveform.vwf.vt|
+Z16 !s90 -work|work|Waveform.vwf.vt|
+!s101 -O0
+R10

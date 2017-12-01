@@ -1,0 +1,34 @@
+|fulladder
+Sum <= HalfAdder:inst2.SUM
+A => HalfAdder:inst3.A
+B => HalfAdder:inst3.B
+Carry_in => HalfAdder:inst2.B
+Carry_out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fulladder|HalfAdder:inst2
+CARRY <= INV.DB_MAX_OUTPUT_PORT_TYPE
+B => A-NAND-B.IN0
+B => NOTB.IN0
+B => NOTB.IN1
+B => NOTA-NAND-B.IN0
+A => A-NAND-B.IN1
+A => A-NAND-NOTB.IN1
+A => NOTA.IN0
+A => NOTA.IN1
+SUM <= AND_INV.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|fulladder|HalfAdder:inst3
+CARRY <= INV.DB_MAX_OUTPUT_PORT_TYPE
+B => A-NAND-B.IN0
+B => NOTB.IN0
+B => NOTB.IN1
+B => NOTA-NAND-B.IN0
+A => A-NAND-B.IN1
+A => A-NAND-NOTB.IN1
+A => NOTA.IN0
+A => NOTA.IN1
+SUM <= AND_INV.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, H:/gitrepo/Digital-Logic-Lab/fulladder/fulladder.bdf
+source_file = 1, H:/gitrepo/Digital-Logic-Lab/HalfAdder/HalfAdder.bdf
+source_file = 1, H:/gitrepo/Digital-Logic-Lab/fulladder/test.bdf
+source_file = 1, H:/gitrepo/Digital-Logic-Lab/fulladder/Waveform.vwf
+source_file = 1, H:/gitrepo/Digital-Logic-Lab/fulladder/db/fulladder.cbx.xml
+design_name = fulladder
+instance = comp, \Sum~output , Sum~output, fulladder, 1
+instance = comp, \Carry_out~output , Carry_out~output, fulladder, 1
+instance = comp, \A~input , A~input, fulladder, 1
+instance = comp, \B~input , B~input, fulladder, 1
+instance = comp, \Carry_in~input , Carry_in~input, fulladder, 1
+instance = comp, \inst2|AND_INV~0 , inst2|AND_INV~0, fulladder, 1
+instance = comp, \inst~0 , inst~0, fulladder, 1

@@ -1,0 +1,174 @@
+|addsub
+Carry_out <= fourbitadd:inst.Carry_out
+addsub => fourbitadd:inst.Carry_in
+addsub => inst1[3].IN1
+addsub => inst1[2].IN1
+addsub => inst1[1].IN1
+addsub => inst1[0].IN1
+A[0] => fourbitadd:inst.A[0]
+A[1] => fourbitadd:inst.A[1]
+A[2] => fourbitadd:inst.A[2]
+A[3] => fourbitadd:inst.A[3]
+B[0] => inst1[0].IN0
+B[1] => inst1[1].IN0
+B[2] => inst1[2].IN0
+B[3] => inst1[3].IN0
+S[0] <= fourbitadd:inst.S[0]
+S[1] <= fourbitadd:inst.S[1]
+S[2] <= fourbitadd:inst.S[2]
+S[3] <= fourbitadd:inst.S[3]
+
+
+|addsub|fourbitadd:inst
+Carry_out <= FullAdder:inst3.Carry_out
+A[0] => FullAdder:inst.A
+A[1] => FullAdder:inst1.A
+A[2] => FullAdder:inst2.A
+A[3] => FullAdder:inst3.A
+B[0] => FullAdder:inst.B
+B[1] => FullAdder:inst1.B
+B[2] => FullAdder:inst2.B
+B[3] => FullAdder:inst3.B
+Carry_in => FullAdder:inst.Carry_in
+S[0] <= FullAdder:inst.Sum
+S[1] <= FullAdder:inst1.Sum
+S[2] <= FullAdder:inst2.Sum
+S[3] <= FullAdder:inst3.Sum
+
+
+|addsub|fourbitadd:inst|fulladder:inst3
+Sum <= HalfAdder:inst2.SUM
+A => HalfAdder:inst3.A
+B => HalfAdder:inst3.B
+Carry_in => HalfAdder:inst2.B
+Carry_out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|addsub|fourbitadd:inst|fulladder:inst3|HalfAdder:inst2
+CARRY <= INV.DB_MAX_OUTPUT_PORT_TYPE
+B => A-NAND-B.IN0
+B => NOTB.IN0
+B => NOTB.IN1
+B => NOTA-NAND-B.IN0
+A => A-NAND-B.IN1
+A => A-NAND-NOTB.IN1
+A => NOTA.IN0
+A => NOTA.IN1
+SUM <= AND_INV.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|addsub|fourbitadd:inst|fulladder:inst3|HalfAdder:inst3
+CARRY <= INV.DB_MAX_OUTPUT_PORT_TYPE
+B => A-NAND-B.IN0
+B => NOTB.IN0
+B => NOTB.IN1
+B => NOTA-NAND-B.IN0
+A => A-NAND-B.IN1
+A => A-NAND-NOTB.IN1
+A => NOTA.IN0
+A => NOTA.IN1
+SUM <= AND_INV.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|addsub|fourbitadd:inst|fulladder:inst2
+Sum <= HalfAdder:inst2.SUM
+A => HalfAdder:inst3.A
+B => HalfAdder:inst3.B
+Carry_in => HalfAdder:inst2.B
+Carry_out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|addsub|fourbitadd:inst|fulladder:inst2|HalfAdder:inst2
+CARRY <= INV.DB_MAX_OUTPUT_PORT_TYPE
+B => A-NAND-B.IN0
+B => NOTB.IN0
+B => NOTB.IN1
+B => NOTA-NAND-B.IN0
+A => A-NAND-B.IN1
+A => A-NAND-NOTB.IN1
+A => NOTA.IN0
+A => NOTA.IN1
+SUM <= AND_INV.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|addsub|fourbitadd:inst|fulladder:inst2|HalfAdder:inst3
+CARRY <= INV.DB_MAX_OUTPUT_PORT_TYPE
+B => A-NAND-B.IN0
+B => NOTB.IN0
+B => NOTB.IN1
+B => NOTA-NAND-B.IN0
+A => A-NAND-B.IN1
+A => A-NAND-NOTB.IN1
+A => NOTA.IN0
+A => NOTA.IN1
+SUM <= AND_INV.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|addsub|fourbitadd:inst|fulladder:inst1
+Sum <= HalfAdder:inst2.SUM
+A => HalfAdder:inst3.A
+B => HalfAdder:inst3.B
+Carry_in => HalfAdder:inst2.B
+Carry_out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|addsub|fourbitadd:inst|fulladder:inst1|HalfAdder:inst2
+CARRY <= INV.DB_MAX_OUTPUT_PORT_TYPE
+B => A-NAND-B.IN0
+B => NOTB.IN0
+B => NOTB.IN1
+B => NOTA-NAND-B.IN0
+A => A-NAND-B.IN1
+A => A-NAND-NOTB.IN1
+A => NOTA.IN0
+A => NOTA.IN1
+SUM <= AND_INV.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|addsub|fourbitadd:inst|fulladder:inst1|HalfAdder:inst3
+CARRY <= INV.DB_MAX_OUTPUT_PORT_TYPE
+B => A-NAND-B.IN0
+B => NOTB.IN0
+B => NOTB.IN1
+B => NOTA-NAND-B.IN0
+A => A-NAND-B.IN1
+A => A-NAND-NOTB.IN1
+A => NOTA.IN0
+A => NOTA.IN1
+SUM <= AND_INV.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|addsub|fourbitadd:inst|fulladder:inst
+Sum <= HalfAdder:inst2.SUM
+A => HalfAdder:inst3.A
+B => HalfAdder:inst3.B
+Carry_in => HalfAdder:inst2.B
+Carry_out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|addsub|fourbitadd:inst|fulladder:inst|HalfAdder:inst2
+CARRY <= INV.DB_MAX_OUTPUT_PORT_TYPE
+B => A-NAND-B.IN0
+B => NOTB.IN0
+B => NOTB.IN1
+B => NOTA-NAND-B.IN0
+A => A-NAND-B.IN1
+A => A-NAND-NOTB.IN1
+A => NOTA.IN0
+A => NOTA.IN1
+SUM <= AND_INV.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|addsub|fourbitadd:inst|fulladder:inst|HalfAdder:inst3
+CARRY <= INV.DB_MAX_OUTPUT_PORT_TYPE
+B => A-NAND-B.IN0
+B => NOTB.IN0
+B => NOTB.IN1
+B => NOTA-NAND-B.IN0
+A => A-NAND-B.IN1
+A => A-NAND-NOTB.IN1
+A => NOTA.IN0
+A => NOTA.IN1
+SUM <= AND_INV.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,43 @@
+m255
+K3
+13
+cModel Technology
+Z0 dH:\gitrepo\Digital-Logic-Lab\addsub\simulation\qsim
+vaddsub
+Z1 !s100 Q2M5oUFYmBo7C9UDn3RWz0
+Z2 IjY]iKfHcgdDzAcAUo5zb:2
+Z3 V_7oSn2^0KQ`^dYkEOjUTS3
+Z4 dH:\gitrepo\Digital-Logic-Lab\addsub\simulation\qsim
+Z5 w1512144336
+Z6 8addsub.vo
+Z7 Faddsub.vo
+L0 32
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|addsub.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1512144337.195000
+Z12 !s107 addsub.vo|
+!s101 -O0
+vaddsub_vlg_vec_tst
+!i10b 1
+!s100 84a@:[]<8QP79^Eo5]kI>3
+I2j4N>^W;G2QO9NPmfSk4S2
+Z13 VCfdFm9PLAAaN=dQ[RX_Xi2
+R4
+w1512144334
+Z14 8Waveform.vwf.vt
+Z15 FWaveform.vwf.vt
+L0 30
+R8
+r1
+!s85 0
+31
+!s108 1512144337.526000
+!s107 Waveform.vwf.vt|
+Z16 !s90 -work|work|Waveform.vwf.vt|
+!s101 -O0
+R10

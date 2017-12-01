@@ -1,0 +1,83 @@
+m255
+K3
+13
+cModel Technology
+Z0 dH:\gitrepo\Digital-Logic-Lab\fulladder\simulation\qsim
+vFullAdder
+Z1 !s100 N>o4Z0iSdeH<k[Q<JJ=mF1
+Z2 IDL<n4SRg=XJfSo1diA5Z63
+Z3 VkFOc9C=an>d6?5B;>[oTF1
+Z4 dH:\gitrepo\Digital-Logic-Lab\fulladder\simulation\qsim
+Z5 w1512139272
+Z6 8fulladder.vo
+Z7 Ffulladder.vo
+L0 32
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|fulladder.vo|
+Z10 o-work work -O0
+Z11 n@full@adder
+Z12 !s108 1512139273.598000
+Z13 !s107 fulladder.vo|
+!i10b 1
+!s85 0
+!s101 -O0
+vfulladder
+Z14 IW8lLHdOgIf5kHn[ILknLV2
+Z15 V2Ve6Q8oEba:l8L9iJ02`@1
+R4
+Z16 w1512139467
+R6
+R7
+L0 32
+R8
+r1
+31
+R9
+R10
+!i10b 1
+Z17 !s100 D5Fk8A33c<6Kj90dO:4MQ1
+!s85 0
+Z18 !s108 1512139468.226000
+R13
+!s101 -O0
+vfulladder_vlg_vec_tst
+!i10b 1
+!s100 :Rmmc_L8:zJ]PTm=?2K;K1
+I@PRdVXPbfoAHB::7V8Y9Q1
+Vn^GVkX;GkeW:O2J65kJVi3
+R4
+w1512139465
+Z19 8Waveform.vwf.vt
+Z20 FWaveform.vwf.vt
+L0 30
+R8
+r1
+!s85 0
+31
+!s108 1512139468.444000
+!s107 Waveform.vwf.vt|
+Z21 !s90 -work|work|Waveform.vwf.vt|
+!s101 -O0
+R10
+vFullAdder_vlg_vec_tst
+Z22 !s100 [BZ48a2<`QSLYV:b<8[VF3
+Z23 I0IHV2i6ZIzEgEJQa:`Wci3
+Z24 V]<3@QoABVjl5_[FYU:^O:1
+R4
+Z25 w1512139271
+R19
+R20
+L0 30
+R8
+r1
+31
+R21
+R10
+Z26 n@full@adder_vlg_vec_tst
+Z27 !s108 1512139273.794000
+Z28 !s107 Waveform.vwf.vt|
+!i10b 1
+!s85 0
+!s101 -O0
