@@ -41,8 +41,8 @@ agreement for further details.
 	(port
 		(pt 0 64)
 		(input)
-		(text "addsub" (rect 0 0 56 16)(font "Arial" (font_size 8)))
-		(text "addsub" (rect 21 59 77 75)(font "Arial" (font_size 8)))
+		(text "SUB" (rect 0 0 28 16)(font "Arial" (font_size 8)))
+		(text "SUB" (rect 21 59 49 75)(font "Arial" (font_size 8)))
 		(line (pt 0 64)(pt 16 64))
 	)
 	(port

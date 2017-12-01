@@ -1,10 +1,10 @@
 |addsub
 Carry_out <= fourbitadd:inst.Carry_out
-addsub => fourbitadd:inst.Carry_in
-addsub => inst1[3].IN1
-addsub => inst1[2].IN1
-addsub => inst1[1].IN1
-addsub => inst1[0].IN1
+SUB => fourbitadd:inst.Carry_in
+SUB => inst1[3].IN1
+SUB => inst1[2].IN1
+SUB => inst1[1].IN1
+SUB => inst1[0].IN1
 A[0] => fourbitadd:inst.A[0]
 A[1] => fourbitadd:inst.A[1]
 A[2] => fourbitadd:inst.A[2]

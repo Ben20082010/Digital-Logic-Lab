@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 dH:\gitrepo\Digital-Logic-Lab\extALU\simulation\qsim
+vextALU
+Z1 !s100 `akmVSUHOA59>`P7Q713o2
+Z2 I=`a?4?dVd_h9PV]D>7CX12
+Z3 VgQ^m5FXfa:<fV1dF4a]O^3
+Z4 dH:\gitrepo\Digital-Logic-Lab\extALU\simulation\qsim
+Z5 w1512147826
+Z6 8extALU.vo
+Z7 FextALU.vo
+L0 32
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|extALU.vo|
+Z10 o-work work -O0
+Z11 next@a@l@u
+!i10b 1
+!s85 0
+Z12 !s108 1512147826.879000
+Z13 !s107 extALU.vo|
+!s101 -O0
+vextALU_vlg_vec_tst
+!i10b 1
+!s100 kinP8oS83ciIDHg6Az2n40
+I0^;=R0MO_UEPX_]`eb?@k0
+Z14 V1`Z`QGQn]VcPn@F@^_[k;3
+R4
+w1512147824
+Z15 8Waveform.vwf.vt
+Z16 FWaveform.vwf.vt
+L0 30
+R8
+r1
+!s85 0
+31
+!s108 1512147827.108000
+!s107 Waveform.vwf.vt|
+Z17 !s90 -work|work|Waveform.vwf.vt|
+!s101 -O0
+R10
+Z18 next@a@l@u_vlg_vec_tst
