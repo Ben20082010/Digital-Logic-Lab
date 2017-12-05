@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Fri Dec 01 17:01:03 2017
+Analysis & Synthesis Status : Successful - Tue Dec 05 14:48:45 2017
 Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 Revision Name : extALU
 Top-level Entity Name : extALU
 Family : Cyclone IV E
-Total logic elements : 11
-    Total combinational functions : 11
+Total logic elements : 15
+    Total combinational functions : 15
     Dedicated logic registers : 0
 Total registers : 0
-Total pins : 15
+Total pins : 16
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

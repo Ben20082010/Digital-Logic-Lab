@@ -28,7 +28,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "SUB",
+					"name" : "ASL",
+					"strict" : false
+				},
+				{
+					"name" : "B[1]",
 					"strict" : false
 				},
 				{
@@ -36,7 +40,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "B[1]",
+					"name" : "SUB",
 					"strict" : false
 				},
 				{

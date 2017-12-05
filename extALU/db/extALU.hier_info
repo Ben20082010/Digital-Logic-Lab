@@ -1,10 +1,17 @@
 |extALU
 Carry_out <= addsub:inst1.Carry_out
-SUB => addsub:inst1.SUB
+SUB => inst10.IN0
+ASL => inst9.IN0
+ASL => inst9.IN1
+ASL => 74157:inst7.SEL
 A[0] => addsub:inst1.A[0]
+A[0] => 74157:inst7.B1
 A[1] => addsub:inst1.A[1]
+A[1] => 74157:inst7.B2
 A[2] => addsub:inst1.A[2]
+A[2] => 74157:inst7.B3
 A[3] => addsub:inst1.A[3]
+A[3] => 74157:inst7.B4
 B[0] => 74157:inst.A1
 B[1] => 74157:inst.A2
 B[2] => 74157:inst.A3
@@ -188,6 +195,25 @@ A => A-NAND-NOTB.IN1
 A => NOTA.IN0
 A => NOTA.IN1
 SUM <= AND_INV.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|extALU|74157:inst7
+Y4 <= 25.DB_MAX_OUTPUT_PORT_TYPE
+A4 => 20.IN0
+GN => 12.IN0
+GN => 13.IN0
+SEL => 12.IN1
+SEL => 1.IN0
+B4 => 21.IN0
+Y3 <= 24.DB_MAX_OUTPUT_PORT_TYPE
+A3 => 18.IN0
+B3 => 19.IN0
+Y2 <= 23.DB_MAX_OUTPUT_PORT_TYPE
+A2 => 16.IN0
+B2 => 17.IN0
+Y1 <= 22.DB_MAX_OUTPUT_PORT_TYPE
+A1 => 14.IN0
+B1 => 15.IN0
 
 
 |extALU|74157:inst
