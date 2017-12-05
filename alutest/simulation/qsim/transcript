@@ -1,0 +1,23 @@
+# do alutest.do 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module alutest
+# 
+# Top level modules:
+# 	alutest
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module alutest_vlg_vec_tst
+# 
+# Top level modules:
+# 	alutest_vlg_vec_tst
+# vsim -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver -c -voptargs=\"+acc\" -t 1ps -novopt work.alutest_vlg_vec_tst 
+# Loading work.alutest_vlg_vec_tst
+# Loading work.alutest
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading altera_ver.dffeas
+# Loading altera_ver.PRIM_GDFF_LOW
+# ** Note: $finish    : Waveform.vwf.vt(53)
+#    Time: 10240 ns  Iteration: 0  Instance: /alutest_vlg_vec_tst

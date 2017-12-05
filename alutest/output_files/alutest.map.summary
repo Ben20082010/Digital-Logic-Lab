@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Dec 05 15:48:40 2017
+Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Standard Edition
+Revision Name : alutest
+Top-level Entity Name : alutest
+Family : Cyclone IV E
+Total logic elements : 21
+    Total combinational functions : 21
+    Dedicated logic registers : 10
+Total registers : 10
+Total pins : 15
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

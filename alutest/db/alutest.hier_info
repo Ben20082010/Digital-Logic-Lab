@@ -1,0 +1,427 @@
+|alutest
+Carry_out <= extALU:inst2.Carry_out
+CLK_instruction => count8:inst.clock
+A[0] <= testcounter:inst1.X[0]
+A[1] <= testcounter:inst1.X[1]
+A[2] <= testcounter:inst1.X[2]
+A[3] <= testcounter:inst1.X[3]
+CLK_num => testcounter:inst1.Clk
+B[0] <= testcounter:inst1.Y[0]
+B[1] <= testcounter:inst1.Y[1]
+B[2] <= testcounter:inst1.Y[2]
+B[3] <= testcounter:inst1.Y[3]
+s[0] <= extALU:inst2.S[0]
+s[1] <= extALU:inst2.S[1]
+s[2] <= extALU:inst2.S[2]
+s[3] <= extALU:inst2.S[3]
+
+
+|alutest|extALU:inst2
+Carry_out <= addsub:inst1.Carry_out
+SUB => inst10.IN0
+ASL => inst9.IN0
+ASL => inst9.IN1
+ASL => 74157:inst7.SEL
+A[0] => addsub:inst1.A[0]
+A[0] => 74157:inst7.B1
+A[1] => addsub:inst1.A[1]
+A[1] => 74157:inst7.B2
+A[2] => addsub:inst1.A[2]
+A[2] => 74157:inst7.B3
+A[3] => addsub:inst1.A[3]
+A[3] => 74157:inst7.B4
+B[0] => 74157:inst.A1
+B[1] => 74157:inst.A2
+B[2] => 74157:inst.A3
+B[3] => 74157:inst.A4
+B_is_1 => 74157:inst.SEL
+S[0] <= addsub:inst1.S[0]
+S[1] <= addsub:inst1.S[1]
+S[2] <= addsub:inst1.S[2]
+S[3] <= addsub:inst1.S[3]
+
+
+|alutest|extALU:inst2|addsub:inst1
+Carry_out <= fourbitadd:inst.Carry_out
+SUB => fourbitadd:inst.Carry_in
+SUB => inst1[3].IN1
+SUB => inst1[2].IN1
+SUB => inst1[1].IN1
+SUB => inst1[0].IN1
+A[0] => fourbitadd:inst.A[0]
+A[1] => fourbitadd:inst.A[1]
+A[2] => fourbitadd:inst.A[2]
+A[3] => fourbitadd:inst.A[3]
+B[0] => inst1[0].IN0
+B[1] => inst1[1].IN0
+B[2] => inst1[2].IN0
+B[3] => inst1[3].IN0
+S[0] <= fourbitadd:inst.S[0]
+S[1] <= fourbitadd:inst.S[1]
+S[2] <= fourbitadd:inst.S[2]
+S[3] <= fourbitadd:inst.S[3]
+
+
+|alutest|extALU:inst2|addsub:inst1|fourbitadd:inst
+Carry_out <= FullAdder:inst3.Carry_out
+A[0] => FullAdder:inst.A
+A[1] => FullAdder:inst1.A
+A[2] => FullAdder:inst2.A
+A[3] => FullAdder:inst3.A
+B[0] => FullAdder:inst.B
+B[1] => FullAdder:inst1.B
+B[2] => FullAdder:inst2.B
+B[3] => FullAdder:inst3.B
+Carry_in => FullAdder:inst.Carry_in
+S[0] <= FullAdder:inst.Sum
+S[1] <= FullAdder:inst1.Sum
+S[2] <= FullAdder:inst2.Sum
+S[3] <= FullAdder:inst3.Sum
+
+
+|alutest|extALU:inst2|addsub:inst1|fourbitadd:inst|fulladder:inst3
+Sum <= HalfAdder:inst2.SUM
+A => HalfAdder:inst3.A
+B => HalfAdder:inst3.B
+Carry_in => HalfAdder:inst2.B
+Carry_out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alutest|extALU:inst2|addsub:inst1|fourbitadd:inst|fulladder:inst3|HalfAdder:inst2
+CARRY <= INV.DB_MAX_OUTPUT_PORT_TYPE
+B => A-NAND-B.IN0
+B => NOTB.IN0
+B => NOTB.IN1
+B => NOTA-NAND-B.IN0
+A => A-NAND-B.IN1
+A => A-NAND-NOTB.IN1
+A => NOTA.IN0
+A => NOTA.IN1
+SUM <= AND_INV.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alutest|extALU:inst2|addsub:inst1|fourbitadd:inst|fulladder:inst3|HalfAdder:inst3
+CARRY <= INV.DB_MAX_OUTPUT_PORT_TYPE
+B => A-NAND-B.IN0
+B => NOTB.IN0
+B => NOTB.IN1
+B => NOTA-NAND-B.IN0
+A => A-NAND-B.IN1
+A => A-NAND-NOTB.IN1
+A => NOTA.IN0
+A => NOTA.IN1
+SUM <= AND_INV.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alutest|extALU:inst2|addsub:inst1|fourbitadd:inst|fulladder:inst2
+Sum <= HalfAdder:inst2.SUM
+A => HalfAdder:inst3.A
+B => HalfAdder:inst3.B
+Carry_in => HalfAdder:inst2.B
+Carry_out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alutest|extALU:inst2|addsub:inst1|fourbitadd:inst|fulladder:inst2|HalfAdder:inst2
+CARRY <= INV.DB_MAX_OUTPUT_PORT_TYPE
+B => A-NAND-B.IN0
+B => NOTB.IN0
+B => NOTB.IN1
+B => NOTA-NAND-B.IN0
+A => A-NAND-B.IN1
+A => A-NAND-NOTB.IN1
+A => NOTA.IN0
+A => NOTA.IN1
+SUM <= AND_INV.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alutest|extALU:inst2|addsub:inst1|fourbitadd:inst|fulladder:inst2|HalfAdder:inst3
+CARRY <= INV.DB_MAX_OUTPUT_PORT_TYPE
+B => A-NAND-B.IN0
+B => NOTB.IN0
+B => NOTB.IN1
+B => NOTA-NAND-B.IN0
+A => A-NAND-B.IN1
+A => A-NAND-NOTB.IN1
+A => NOTA.IN0
+A => NOTA.IN1
+SUM <= AND_INV.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alutest|extALU:inst2|addsub:inst1|fourbitadd:inst|fulladder:inst1
+Sum <= HalfAdder:inst2.SUM
+A => HalfAdder:inst3.A
+B => HalfAdder:inst3.B
+Carry_in => HalfAdder:inst2.B
+Carry_out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alutest|extALU:inst2|addsub:inst1|fourbitadd:inst|fulladder:inst1|HalfAdder:inst2
+CARRY <= INV.DB_MAX_OUTPUT_PORT_TYPE
+B => A-NAND-B.IN0
+B => NOTB.IN0
+B => NOTB.IN1
+B => NOTA-NAND-B.IN0
+A => A-NAND-B.IN1
+A => A-NAND-NOTB.IN1
+A => NOTA.IN0
+A => NOTA.IN1
+SUM <= AND_INV.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alutest|extALU:inst2|addsub:inst1|fourbitadd:inst|fulladder:inst1|HalfAdder:inst3
+CARRY <= INV.DB_MAX_OUTPUT_PORT_TYPE
+B => A-NAND-B.IN0
+B => NOTB.IN0
+B => NOTB.IN1
+B => NOTA-NAND-B.IN0
+A => A-NAND-B.IN1
+A => A-NAND-NOTB.IN1
+A => NOTA.IN0
+A => NOTA.IN1
+SUM <= AND_INV.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alutest|extALU:inst2|addsub:inst1|fourbitadd:inst|fulladder:inst
+Sum <= HalfAdder:inst2.SUM
+A => HalfAdder:inst3.A
+B => HalfAdder:inst3.B
+Carry_in => HalfAdder:inst2.B
+Carry_out <= inst.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alutest|extALU:inst2|addsub:inst1|fourbitadd:inst|fulladder:inst|HalfAdder:inst2
+CARRY <= INV.DB_MAX_OUTPUT_PORT_TYPE
+B => A-NAND-B.IN0
+B => NOTB.IN0
+B => NOTB.IN1
+B => NOTA-NAND-B.IN0
+A => A-NAND-B.IN1
+A => A-NAND-NOTB.IN1
+A => NOTA.IN0
+A => NOTA.IN1
+SUM <= AND_INV.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alutest|extALU:inst2|addsub:inst1|fourbitadd:inst|fulladder:inst|HalfAdder:inst3
+CARRY <= INV.DB_MAX_OUTPUT_PORT_TYPE
+B => A-NAND-B.IN0
+B => NOTB.IN0
+B => NOTB.IN1
+B => NOTA-NAND-B.IN0
+A => A-NAND-B.IN1
+A => A-NAND-NOTB.IN1
+A => NOTA.IN0
+A => NOTA.IN1
+SUM <= AND_INV.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alutest|extALU:inst2|74157:inst7
+Y4 <= 25.DB_MAX_OUTPUT_PORT_TYPE
+A4 => 20.IN0
+GN => 12.IN0
+GN => 13.IN0
+SEL => 12.IN1
+SEL => 1.IN0
+B4 => 21.IN0
+Y3 <= 24.DB_MAX_OUTPUT_PORT_TYPE
+A3 => 18.IN0
+B3 => 19.IN0
+Y2 <= 23.DB_MAX_OUTPUT_PORT_TYPE
+A2 => 16.IN0
+B2 => 17.IN0
+Y1 <= 22.DB_MAX_OUTPUT_PORT_TYPE
+A1 => 14.IN0
+B1 => 15.IN0
+
+
+|alutest|extALU:inst2|74157:inst
+Y4 <= 25.DB_MAX_OUTPUT_PORT_TYPE
+A4 => 20.IN0
+GN => 12.IN0
+GN => 13.IN0
+SEL => 12.IN1
+SEL => 1.IN0
+B4 => 21.IN0
+Y3 <= 24.DB_MAX_OUTPUT_PORT_TYPE
+A3 => 18.IN0
+B3 => 19.IN0
+Y2 <= 23.DB_MAX_OUTPUT_PORT_TYPE
+A2 => 16.IN0
+B2 => 17.IN0
+Y1 <= 22.DB_MAX_OUTPUT_PORT_TYPE
+A1 => 14.IN0
+B1 => 15.IN0
+
+
+|alutest|count8:inst
+clock => lpm_counter:LPM_COUNTER_component.clock
+q[0] <= lpm_counter:LPM_COUNTER_component.q[0]
+q[1] <= lpm_counter:LPM_COUNTER_component.q[1]
+q[2] <= lpm_counter:LPM_COUNTER_component.q[2]
+q[3] <= lpm_counter:LPM_COUNTER_component.q[3]
+q[4] <= lpm_counter:LPM_COUNTER_component.q[4]
+q[5] <= lpm_counter:LPM_COUNTER_component.q[5]
+q[6] <= lpm_counter:LPM_COUNTER_component.q[6]
+q[7] <= lpm_counter:LPM_COUNTER_component.q[7]
+
+
+|alutest|count8:inst|lpm_counter:LPM_COUNTER_component
+clock => cntr_eph:auto_generated.clock
+clk_en => ~NO_FANOUT~
+cnt_en => ~NO_FANOUT~
+updown => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+data[0] => ~NO_FANOUT~
+data[1] => ~NO_FANOUT~
+data[2] => ~NO_FANOUT~
+data[3] => ~NO_FANOUT~
+data[4] => ~NO_FANOUT~
+data[5] => ~NO_FANOUT~
+data[6] => ~NO_FANOUT~
+data[7] => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+q[0] <= cntr_eph:auto_generated.q[0]
+q[1] <= cntr_eph:auto_generated.q[1]
+q[2] <= cntr_eph:auto_generated.q[2]
+q[3] <= cntr_eph:auto_generated.q[3]
+q[4] <= cntr_eph:auto_generated.q[4]
+q[5] <= cntr_eph:auto_generated.q[5]
+q[6] <= cntr_eph:auto_generated.q[6]
+q[7] <= cntr_eph:auto_generated.q[7]
+cout <= <GND>
+eq[0] <= <GND>
+eq[1] <= <GND>
+eq[2] <= <GND>
+eq[3] <= <GND>
+eq[4] <= <GND>
+eq[5] <= <GND>
+eq[6] <= <GND>
+eq[7] <= <GND>
+eq[8] <= <GND>
+eq[9] <= <GND>
+eq[10] <= <GND>
+eq[11] <= <GND>
+eq[12] <= <GND>
+eq[13] <= <GND>
+eq[14] <= <GND>
+eq[15] <= <GND>
+
+
+|alutest|count8:inst|lpm_counter:LPM_COUNTER_component|cntr_eph:auto_generated
+clock => counter_reg_bit[7].CLK
+clock => counter_reg_bit[6].CLK
+clock => counter_reg_bit[5].CLK
+clock => counter_reg_bit[4].CLK
+clock => counter_reg_bit[3].CLK
+clock => counter_reg_bit[2].CLK
+clock => counter_reg_bit[1].CLK
+clock => counter_reg_bit[0].CLK
+q[0] <= counter_reg_bit[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= counter_reg_bit[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= counter_reg_bit[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= counter_reg_bit[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= counter_reg_bit[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= counter_reg_bit[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= counter_reg_bit[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= counter_reg_bit[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alutest|testcounter:inst1
+X[0] <= q[4].DB_MAX_OUTPUT_PORT_TYPE
+X[1] <= q[5].DB_MAX_OUTPUT_PORT_TYPE
+X[2] <= q[6].DB_MAX_OUTPUT_PORT_TYPE
+X[3] <= q[7].DB_MAX_OUTPUT_PORT_TYPE
+Clk => count8:inst.clock
+Y[0] <= q[0].DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= q[1].DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= q[2].DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= q[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alutest|testcounter:inst1|count8:inst
+clock => lpm_counter:LPM_COUNTER_component.clock
+q[0] <= lpm_counter:LPM_COUNTER_component.q[0]
+q[1] <= lpm_counter:LPM_COUNTER_component.q[1]
+q[2] <= lpm_counter:LPM_COUNTER_component.q[2]
+q[3] <= lpm_counter:LPM_COUNTER_component.q[3]
+q[4] <= lpm_counter:LPM_COUNTER_component.q[4]
+q[5] <= lpm_counter:LPM_COUNTER_component.q[5]
+q[6] <= lpm_counter:LPM_COUNTER_component.q[6]
+q[7] <= lpm_counter:LPM_COUNTER_component.q[7]
+
+
+|alutest|testcounter:inst1|count8:inst|lpm_counter:LPM_COUNTER_component
+clock => cntr_eph:auto_generated.clock
+clk_en => ~NO_FANOUT~
+cnt_en => ~NO_FANOUT~
+updown => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+data[0] => ~NO_FANOUT~
+data[1] => ~NO_FANOUT~
+data[2] => ~NO_FANOUT~
+data[3] => ~NO_FANOUT~
+data[4] => ~NO_FANOUT~
+data[5] => ~NO_FANOUT~
+data[6] => ~NO_FANOUT~
+data[7] => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+q[0] <= cntr_eph:auto_generated.q[0]
+q[1] <= cntr_eph:auto_generated.q[1]
+q[2] <= cntr_eph:auto_generated.q[2]
+q[3] <= cntr_eph:auto_generated.q[3]
+q[4] <= cntr_eph:auto_generated.q[4]
+q[5] <= cntr_eph:auto_generated.q[5]
+q[6] <= cntr_eph:auto_generated.q[6]
+q[7] <= cntr_eph:auto_generated.q[7]
+cout <= <GND>
+eq[0] <= <GND>
+eq[1] <= <GND>
+eq[2] <= <GND>
+eq[3] <= <GND>
+eq[4] <= <GND>
+eq[5] <= <GND>
+eq[6] <= <GND>
+eq[7] <= <GND>
+eq[8] <= <GND>
+eq[9] <= <GND>
+eq[10] <= <GND>
+eq[11] <= <GND>
+eq[12] <= <GND>
+eq[13] <= <GND>
+eq[14] <= <GND>
+eq[15] <= <GND>
+
+
+|alutest|testcounter:inst1|count8:inst|lpm_counter:LPM_COUNTER_component|cntr_eph:auto_generated
+clock => counter_reg_bit[7].CLK
+clock => counter_reg_bit[6].CLK
+clock => counter_reg_bit[5].CLK
+clock => counter_reg_bit[4].CLK
+clock => counter_reg_bit[3].CLK
+clock => counter_reg_bit[2].CLK
+clock => counter_reg_bit[1].CLK
+clock => counter_reg_bit[0].CLK
+q[0] <= counter_reg_bit[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= counter_reg_bit[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= counter_reg_bit[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= counter_reg_bit[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= counter_reg_bit[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= counter_reg_bit[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= counter_reg_bit[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= counter_reg_bit[7].DB_MAX_OUTPUT_PORT_TYPE
+
+

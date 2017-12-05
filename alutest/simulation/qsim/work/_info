@@ -1,0 +1,43 @@
+m255
+K3
+13
+cModel Technology
+Z0 dH:\gitrepo\Digital-Logic-Lab\alutest\simulation\qsim
+valutest
+Z1 !s100 g[_]d@U;@iO6L4dMbOGKK2
+Z2 IVSZmUcWa3j3`XS5E?N@[n2
+Z3 VE=eeEz@FP8;gfgiMPlXYH1
+Z4 dH:\gitrepo\Digital-Logic-Lab\alutest\simulation\qsim
+Z5 w1512489465
+Z6 8alutest.vo
+Z7 Falutest.vo
+L0 32
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|alutest.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1512489466.498000
+Z12 !s107 alutest.vo|
+!s101 -O0
+valutest_vlg_vec_tst
+!i10b 1
+!s100 `Q5jI@ojL^CPeaTfRb0bl0
+IS2e5ZdCZlb?Ydj0nRZfoY3
+Z13 V9Zm]mcRiA9@8XDnb6M8dM3
+R4
+w1512489464
+Z14 8Waveform.vwf.vt
+Z15 FWaveform.vwf.vt
+L0 30
+R8
+r1
+!s85 0
+31
+!s108 1512489466.751000
+!s107 Waveform.vwf.vt|
+Z16 !s90 -work|work|Waveform.vwf.vt|
+!s101 -O0
+R10
