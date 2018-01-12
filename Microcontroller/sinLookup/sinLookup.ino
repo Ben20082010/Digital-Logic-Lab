@@ -1,12 +1,13 @@
-//
-const int X0 = 2;
+#include "sinLUT.h"
+
+const int taylorK=2;const int X0 = 2;
 const int X1 = 3;
 const int X2 = 4;
 const int X3 = 5;
 const int X4 = 6;
 const int X5 = 7;
 
-
+//
 //const int X0 = 7;
 //const int X1 = 6;
 //const int X2 = 5;
@@ -36,23 +37,28 @@ void setup() {
    pinMode(Y2, OUTPUT);
    pinMode(Y3, OUTPUT);
    pinMode(Y4, OUTPUT);
-   
+  
 }
 
 void loop() {
+   int sinx;
+    int modSinx;
 
-  for(int i=0; i<=63; i++){
-    setX(i);
-    //delay(100);
+  for(int i=-128;i<128;i++){
+
+
+    
+    //if (i>=0){
+      sinx=sinLUT(i)+32;
+    //}
+
+    //else {
+      //sinx=sinLUT(i);
+    //}
+    fastWriteY(sinx);
+    Serial.print(i);
+    Serial.print(' ');
+    Serial.println(sinx);
   }
-}
-
-void setX(int num){
-  digitalWrite(X0,num & 0b000001);
-  digitalWrite(X1,num & 0b000010);
-  digitalWrite(X2,num & 0b000100);
-  digitalWrite(X3,num & 0b001000);
-  digitalWrite(X4,num & 0b010000);
-  digitalWrite(X5,num & 0b100000);
 }
 
