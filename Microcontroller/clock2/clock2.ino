@@ -1,3 +1,6 @@
+#include <TimerOne.h>
+
+const float frequency= 100;//in HZ
 
 const int X0 = 2;
 const int X1 = 3;
@@ -22,6 +25,7 @@ const int Y4 = 13;
 
 const int taylorK=4;
 
+int i=0;
 
 void setup() {
   
@@ -40,18 +44,30 @@ void setup() {
    pinMode(Y4, OUTPUT);
 
    setTaylorConst();
+
+ int period = 1000000/(256*frequency);
+  Timer1.initialize(period);
+  Timer1.attachInterrupt(callback);
+  
+}
+
+void callback()
+{
+  double sinx;
+   int modSinx;
+  if(i<256){
+    i++;
+  }else{
+    i=0;
+  }
+  sinx=sinTaylor(i*3.14159/128);
+    modSinx=32+sinx*31;
+    setX(modSinx);
+  
 }
 
 void loop() {
-    double sinx;
-    int modSinx;
 
-  for(int i=0;i<256;i++){
-
-    sinx=sinTaylor(i*3.14159/128);
-    modSinx=32+sinx*31;
-    setX(modSinx);
-  }
 }
 
 
