@@ -22,7 +22,7 @@ const int Y3 = 11;
 const int Y4 = 12;
 const int Y5 = 13;
 
-int second=0;
+int second=30;
 
 void setup() {
   // put your setup code here, to run once:
@@ -43,31 +43,33 @@ void setup() {
 }
 
 void loop() {
+  float x,y;
   // circle:
   for(int i=-128;i<128;i++){
-    float x=sinLUT(i)+32;
-    float y=sinLUT(i+64)+32;
+    x=sinLUT(i)+32;
+    y=sinLUT(i+64)+32;
     fastWriteX(x);
     fastWriteY(y);
   }
   
-  //12 point
-  for(int i=0;i<=12;i++){
-    float x=sinLUT(256/12*i-128)+32;
-    float y=sinLUT(256/12*i+64-128)+32;
-
-    for (int l=0;l<=14;i++){
-      fastWriteX(x/64*(50+l));
-      fastWriteY(y/64*(50+l));
-    }
-  }
+//  //12 point
+//  for(int i=0;i<=12;i++){
+//    float x=sinLUT(256/12*i-128)+32;
+//    float y=sinLUT(256/12*i+64-128)+32;
+//
+//    for (int l=0;l<=14;l++){
+//      fastWriteX(x/64*(50+l));
+//      fastWriteY(y/64*(50+l));
+//    }
+//  }
 
   //update pointer
-    float x=sinLUT(second/60*256-128)+32;
-    float y=sinLUT(second/60*256-128+64)+32;
-    for (int l=0;l=60;l++){
-      fastWriteX(x/64*l);
-      fastWriteY(y/64*l);
+   second=45;
+    x=sinLUT(second*256/60-128);
+    y=sinLUT(second*256/60-128+64);
+    for (int l=0;l<=30;l++){
+      fastWriteX(x/32*l+32);
+      fastWriteY(y/32*l+32);
     }
       
 }

@@ -1,7 +1,7 @@
 #include "sinLUT.h"
 
-const int taylorK=2
-;const int X0 = 2;
+const int taylorK=2;
+const int X0 = 2;
 const int X1 = 3;
 const int X2 = 4;
 const int X3 = 5;
@@ -20,7 +20,8 @@ const int Y0 = 8;
 const int Y1 = 9;
 const int Y2 = 10;
 const int Y3 = 11;
-const int Y4 = 13;
+const int Y4 = 12;
+const int Y5 = 13;
 
 void setup() {  
    pinMode(X0, OUTPUT);
@@ -36,6 +37,7 @@ void setup() {
    pinMode(Y2, OUTPUT);
    pinMode(Y3, OUTPUT);
    pinMode(Y4, OUTPUT);
+   pinMode(Y5, OUTPUT);
   
 }
 
